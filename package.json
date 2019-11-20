@@ -1,0 +1,30 @@
+{
+  "name": "mongodb-api",
+  "version": "1.0.0",
+  "description": "A simple company info API built using Node, Express, MongoDB Atlas, and Mongoose",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1",
+    "mongoose-unique-validator": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markallen01666/node-mongodb-api.git"
+  },
+  "author": "M Allen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markallen01666/node-mongodb-api/issues"
+  },
+  "homepage": "https://github.com/markallen01666/node-mongodb-api#readme"
+}

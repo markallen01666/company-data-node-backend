@@ -1,0 +1,50 @@
+/* EJS API Interface styling 
+*  M Allen - 2019
+*/
+
+html,
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+h1 {
+  font-size: 6vh;
+}
+
+h2 {
+  font-size: 5vh;
+}
+
+h2, p{
+  color: dimgrey;
+}
+
+p{
+  line-height: 80%;
+}
+
+p.content-text {
+  line-height: 100% !important;
+}
+
+form {
+  padding-top: 4vh;
+}
+
+.masthead {
+    padding-top: 100px; 
+}
+
+.company-name {
+  font-size: 6vw;
+}
+
+.subheading {
+  font-size: 4vw;
+}
