@@ -1,5 +1,4 @@
-# node-mongodb-api
-CRUD backend built using Node, Express, MongoDB Atlas, and Mongoose
- 
-This iteration of my company data API project replaces a simple EJS user interface view with configuration to serve as backend for a React CRUD frontend interface app
+# company-data-node-backend
+A company info API backend to support React CRUD frontend
 
+API built using Node, Express, and Mongoose. Backend software links to a MongoDB NoSQL database hosted on MongoDB Atlas
