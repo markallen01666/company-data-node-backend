@@ -5,6 +5,10 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const cors = require('cors')
+
+// CORS support
+app.use(cors());
 
 // controllers
 const getOfficesController = require('./controllers/getOfficesController')
