@@ -27,6 +27,9 @@ const OfficeSchema = new Schema({
   postcode: {
     type: String,
     required: true
+  },
+  adminLock: {
+    type: Boolean
   }
 })
 

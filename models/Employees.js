@@ -31,6 +31,9 @@ const EmployeeSchema = new Schema({
   },
   email: {
     type: String
+  },
+  adminLock: {
+    type: Boolean
   }
 })
 

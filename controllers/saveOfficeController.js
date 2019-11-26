@@ -9,7 +9,8 @@ module.exports = async (req, res) => {
      number: req.body.number,
      street: req.body.street,
      town: req.body.town,
-     postcode: req.body.postcode
+     postcode: req.body.postcode,
+     adminLock: req.body.adminLock
    });
    res.redirect("/offices");
 };

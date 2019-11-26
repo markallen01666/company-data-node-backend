@@ -10,7 +10,8 @@ module.exports = async (req, res) => {
      office: req.body.office,
      position: req.body.position,
      telephone: req.body.telephone,
-     email: req.body.email
+     email: req.body.email,
+     adminLock: req.body.adminLock
    });
    res.redirect("/staff");
 };
