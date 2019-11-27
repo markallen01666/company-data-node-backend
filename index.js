@@ -9,12 +9,6 @@ const cors = require('cors')
 
 // CORS support
 app.use(cors());
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
 
 // controllers
 const getOfficesController = require('./controllers/getOfficesController')
@@ -39,7 +33,7 @@ app.options('/offices/delete', cors())
 
 app.get('/employees', getEmployeesController)
 app.get('/offices', getOfficesController)
-app.post("/offices/add", saveOfficeController)
+app.post("/offices/add", cors(), saveOfficeController)
 
 // Port allocation and default for Heroku commit
 let port = process.env.PORT
