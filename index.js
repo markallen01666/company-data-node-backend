@@ -10,6 +10,12 @@ const cors = require('cors')
 // CORS support
 app.use(cors());
 
+/*app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+}); */
+
 // controllers
 const getOfficesController = require('./controllers/getOfficesController')
 const getEmployeesController = require('./controllers/getEmployeesController')
@@ -22,6 +28,14 @@ mongoose.connect('mongodb+srv://haleon55:gyc2eivi16mrejC7@cluster0-wvhp3.mongodb
 }, (error => {
   console.log(`Mongoose connection error: ${error}`)
 }))
+
+// Enable CORS pre-flight requests
+app.options('/employees/add', cors())
+app.options('/employees/update', cors())
+app.options('/employees/delete', cors())
+app.options('/offices/add', cors())
+app.options('/offices/update', cors())
+app.options('/offices/delete', cors())
 
 app.get('/employees', getEmployeesController)
 app.get('/offices', getOfficesController)
