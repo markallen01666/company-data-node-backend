@@ -12,5 +12,5 @@ module.exports = async (req, res) => {
      postcode: req.body.postcode,
      adminLock: req.body.adminLock
    });
-   res.redirect("/offices");
+   res.json(data);
 };

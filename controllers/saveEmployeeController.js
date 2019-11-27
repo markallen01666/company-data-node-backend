@@ -13,5 +13,5 @@ module.exports = async (req, res) => {
      email: req.body.email,
      adminLock: req.body.adminLock
    });
-   res.redirect("/staff");
+   res.json(data);
 };

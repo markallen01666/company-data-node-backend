@@ -25,7 +25,7 @@ mongoose.connect('mongodb+srv://haleon55:gyc2eivi16mrejC7@cluster0-wvhp3.mongodb
 
 app.get('/employees', getEmployeesController)
 app.get('/offices', getOfficesController)
-app.post("/offices", saveOfficeController)
+app.post("/offices/add", saveOfficeController)
 
 // Port allocation and default for Heroku commit
 let port = process.env.PORT
