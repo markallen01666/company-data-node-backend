@@ -17,7 +17,6 @@ module.exports = async (req, res) => {
      postcode: req.body.postcode,
      adminLock: req.body.adminLock
    });
-   */
   await Offices.create({
     office: "Stonehouse",
     building: "Welby Court",
@@ -27,5 +26,6 @@ module.exports = async (req, res) => {
     postcode: "ST13 9OA",
     adminLock: false
   });
-  res.send("Done! ");
+   */
+  res.send("Done! " + req.body.office);
 };
