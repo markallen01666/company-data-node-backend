@@ -1,13 +1,13 @@
 // store new office data in database - controller
 
 const Offices = require("../models/Offices.js");
-const localCors = require('cors');
+const localCors = require("cors");
 
 // CORS support
 //app.use(localCors());
 
 module.exports = async (req, res) => {
-/*
+  /*
    await Offices.create({  
      office: req.body.office,
      building: req.body.building,
@@ -18,14 +18,14 @@ module.exports = async (req, res) => {
      adminLock: req.body.adminLock
    });
    */
-  let data = {  
-   office: req.body.office,
-   building: req.body.building,
-   number: req.body.number,
-   street: req.body.street,
-   town: req.body.town,
-   postcode: req.body.postcode,
-   adminLock: req.body.adminLock
- };
-   res.send("Done! ");
+  await Offices.create({
+    office: "Stonehouse",
+    building: "Welby Court",
+    number: "",
+    street: "Harrington Road",
+    town: "Stonehouse",
+    postcode: "ST13 9OA",
+    adminLock: false
+  });
+  res.send("Done! ");
 };
