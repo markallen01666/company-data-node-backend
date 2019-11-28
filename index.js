@@ -33,7 +33,7 @@ app.options('/offices/delete', cors())
 
 app.get('/employees', getEmployeesController)
 app.get('/offices', getOfficesController)
-app.post("/offices/add", cors(), saveOfficeController)
+app.post("/offices/add", saveOfficeController)
 
 // Port allocation and default for Heroku commit
 let port = process.env.PORT

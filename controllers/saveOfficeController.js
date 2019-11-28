@@ -3,6 +3,7 @@
 const Offices = require("../models/Offices.js");
 
 module.exports = async (req, res) => {
+  /*
    await Offices.create({
      office: req.body.office,
      building: req.body.building,
@@ -13,4 +14,6 @@ module.exports = async (req, res) => {
      adminLock: req.body.adminLock
    });
    res.json(data);
+   */
+  res.send("Hello there!");
 };
