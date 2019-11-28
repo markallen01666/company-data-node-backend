@@ -18,6 +18,6 @@ module.exports = async (req, res) => {
    });
      */
    //res.json(data);
-   res.send("Done! " + req.body.office);
+   res.send("Done! ");
 
 };
