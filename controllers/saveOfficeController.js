@@ -4,7 +4,7 @@ const Offices = require("../models/Offices.js");
 const localCors = require('cors');
 
 // CORS support
-app.use(localCors());
+//app.use(localCors());
 
 module.exports = async (req, res) => {
 /*
