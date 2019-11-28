@@ -3,7 +3,6 @@
 const Offices = require("../models/Offices.js");
 
 module.exports = async (req, res) => {
-  res.send("Ready!");
 
    await Offices.create({
      office: req.body.office,
