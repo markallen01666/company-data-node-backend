@@ -5,7 +5,7 @@ const Offices = require("../models/Offices.js");
 module.exports = async (req, res) => {
 
    await Offices.create({
-    office: req.body.office
+    
     /*
      office: req.body.office,
      building: req.body.building,
@@ -17,6 +17,6 @@ module.exports = async (req, res) => {
      */
    });
    //res.json(data);
-   res.send("Done!");
+   res.send("Done!" + req.body.office);
 
 };
