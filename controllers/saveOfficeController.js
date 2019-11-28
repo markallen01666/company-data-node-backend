@@ -1,6 +1,10 @@
 // store new office data in database - controller
 
 const Offices = require("../models/Offices.js");
+const localCors = require('cors');
+
+// CORS support
+app.use(localCors());
 
 module.exports = async (req, res) => {
 /*
