@@ -15,5 +15,5 @@ module.exports = async (req, res) => {
    });
    res.json(data);
    */
-  res.send("Hello there!");
+  res.send(req);
 };
