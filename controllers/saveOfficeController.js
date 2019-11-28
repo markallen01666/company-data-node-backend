@@ -3,8 +3,10 @@
 const Offices = require("../models/Offices.js");
 
 module.exports = async (req, res) => {
-/*
+
    await Offices.create({
+    office: req.body.office
+    /*
      office: req.body.office,
      building: req.body.building,
      number: req.body.number,
@@ -12,10 +14,9 @@ module.exports = async (req, res) => {
      town: req.body.town,
      postcode: req.body.postcode,
      adminLock: req.body.adminLock
+     */
    });
    //res.json(data);
    res.send("Done!");
-*/
-const offices = await Offices.find({})
-  res.json(offices)
+
 };
