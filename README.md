@@ -8,3 +8,5 @@ This is a new Node/Express/Mongoose backend to serve my company data test projec
 The frontend is hosted on Google Firebase, talking to a Node/Express/Mongoose backend hosted on Heroku. The backend in turn interacts with a MongoDB database hosted on MongoDB Atlas.
 
 This project is very much a work in progress - so some buttons do not currently work. Current emphasis is on the option to create a new office record and refresh the view on success.
+
+You can access the current version at: https://company123uk.firebaseapp.com/
