@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
      if (err) {
        res.json({
          status: "Fail",
-         message: "Not allowed - duplicate record!"
+         message: "Not allowed: duplicate Staff ID! This staff ID already exists in the database."
        });
      } else {
        res.json({
