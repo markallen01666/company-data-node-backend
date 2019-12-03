@@ -12,6 +12,18 @@ module.exports = async (req, res) => {
      telephone: req.body.telephone,
      email: req.body.email,
      adminLock: req.body.adminLock
+   },
+   function(err, document) {
+     if (err) {
+       res.json({
+         status: "Fail",
+         message: "Not allowed - duplicate record!"
+       });
+     } else {
+       res.json({
+         status: "Success",
+         message: "Recorded added to system!"
+       });
+     }
    });
-   res.json(data);
 };
