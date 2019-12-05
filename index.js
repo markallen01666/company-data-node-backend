@@ -17,6 +17,7 @@ const getOfficesController = require('./controllers/getOfficesController')
 const getEmployeesController = require('./controllers/getEmployeesController')
 const saveOfficeController = require("./controllers/saveOfficeController")
 const saveEmployeeController = require("./controllers/saveEmployeeController")
+const updateOfficeController = require("./controllers/updateOfficeController")
 
 // connect database
 mongoose.connect('mongodb+srv://haleon55:gyc2eivi16mrejC7@cluster0-wvhp3.mongodb.net/company1', {
@@ -37,6 +38,7 @@ app.options('/offices/delete', cors())
 app.get('/employees', getEmployeesController)
 app.get('/offices', getOfficesController)
 app.post("/offices/add", saveOfficeController)
+app.post("/offices/update", updateOfficeController)
 app.post("/employees/add", saveEmployeeController)
 
 
