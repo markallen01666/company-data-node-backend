@@ -13,11 +13,15 @@ app.use(express.json()); //Used to parse JSON bodies
 app.use(express.urlencoded()); //Parse URL-encoded bodies
 
 // controllers
-const getOfficesController = require('./controllers/getOfficesController')
 const getEmployeesController = require('./controllers/getEmployeesController')
-const saveOfficeController = require("./controllers/saveOfficeController")
 const saveEmployeeController = require("./controllers/saveEmployeeController")
+const updateEmployeeController = require("./controllers/updateEmployeeController")
+const deleteEmployeeController = require("./controllers/deleteEmployeeController")
+const getOfficesController = require('./controllers/getOfficesController')
+const saveOfficeController = require("./controllers/saveOfficeController")
 const updateOfficeController = require("./controllers/updateOfficeController")
+const deleteOfficeController = require("./controllers/deleteOfficeController")
+
 
 // connect database
 mongoose.connect('mongodb+srv://haleon55:gyc2eivi16mrejC7@cluster0-wvhp3.mongodb.net/company1', {
@@ -36,10 +40,13 @@ app.options('/offices/update', cors())
 app.options('/offices/delete', cors())
 
 app.get('/employees', getEmployeesController)
+app.post("/employees/add", saveEmployeeController)
+app.post("/employees/update", updateEmployeeController)
+app.post("/employees/delete", deleteEmployeeController)
 app.get('/offices', getOfficesController)
 app.post("/offices/add", saveOfficeController)
 app.post("/offices/update", updateOfficeController)
-app.post("/employees/add", saveEmployeeController)
+app.post("/offices/delete", deleteOfficeController)
 
 
 // Port allocation and default for Heroku commit
