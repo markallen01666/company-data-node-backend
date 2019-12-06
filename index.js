@@ -24,6 +24,7 @@ const deleteOfficeController = require("./controllers/deleteOfficeController")
 
 
 // connect database
+mongoose.set('useFindAndModify', false);
 mongoose.connect('mongodb+srv://haleon55:gyc2eivi16mrejC7@cluster0-wvhp3.mongodb.net/company1', {
   useNewUrlParser: true,
   useUnifiedTopology: true
